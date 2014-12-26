@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Backbone example, trivia</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>  
+<body>
+	<div class="container">
+		<h1>Trivia Manager</h1>
+		<hr />
+		<div class="page"></div>
+	</div>
+
+	<script type="text/template" id="listTemplate">
+		<a href="#/new" class="btn btn-primary"> New Question </a>
+		<hr />
+		<table class='table stripped'> 
+			<thead> 
+				<tr> 
+					<th>Description</th> 
+					<th>Answer</th> 
+					<th>Option1</th> 
+					<th>Option2</th> 
+					<th>Option3</th> 
+					<th>Option4</th> 
+				</tr> 
+			</thead> 
+			<tbody> 
+				
+			</tbody> 
+		</table>
+	</script>
+	<script type="text/template" id="editTemplate">
+		<form class="edit-question-form">
+			<legend>Create Question</legend>
+			<p>
+				<label>Description</label>
+				<input type="text" name="description"/>
+			</p>
+			<p>
+				<label>Answer</label>
+				<input type="text" name="answer"/>
+			</p>
+			<p>
+			<label>Option1</label>
+			<input type="text" name="option1"/>
+			</p>
+			<p>
+			<label>Option2</label>
+			<input type="text" name="option2"/>
+			</p>
+			<p>
+			<label>Option3</label>
+			<input type="text" name="option3"/>
+			</p>
+			<p>
+			<label>Option4</label>
+			<input type="text" name="option4"/>
+			</p>
+			<hr />
+			<Button type="submit" class="btn">Create</Button>
+		</form>
+	</script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+	<script src="js/templates.js"></script>
+	<script src="js/snippets.js"></script>
+	<script src="js/backboneHandler.js"></script>
+</body>
+</html>
