@@ -1,0 +1,25 @@
+<a href="#/new" class="btn btn-primary"> New Question </a>
+<hr />
+<table class='table stripped'> 
+	<thead> 
+		<tr> 
+			<th>Description</th> 
+			<th>Answer</th> 
+			<th>Option1</th> 
+			<th>Option2</th> 
+			<th>Option3</th> 
+		</tr> 
+	</thead> 
+	<tbody> 	
+		<% _.each(questions, function(question) { %>
+			<tr>
+				<td><%= question.get('description') %></td>
+				<td><%= question.get('answer') %></td>
+				<td><%= question.get('option1') %></td>
+				<td><%= question.get('option2') %></td>
+				<td><%= question.get('option3') %></td>
+				<td><a href="#/edit/<%= question.id %>" class="btn">Edit</a></td>
+			</tr>
+		<% }) %>		
+	</tbody> 
+</table>

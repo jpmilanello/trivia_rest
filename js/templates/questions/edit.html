@@ -1,0 +1,30 @@
+<form class="edit-question-form">
+	<legend><%= question ? 'Update' : 'Create' %> Question</legend>
+	<p>
+		<label>Description</label>
+		<input type="text" name="description" value="<%= question ? question.get('description') : '' %>"/>
+	</p>
+	<p>
+		<label>Answer</label>
+		<input type="text" name="answer" value="<%= question ? question.get('answer') : '' %>"/>
+	</p>
+	<p>
+	<label>Option1</label>
+	<input type="text" name="option1" value="<%= question ? question.get('option1') : '' %>"/>
+	</p>
+	<p>
+	<label>Option2</label>
+	<input type="text" name="option2" value="<%= question ? question.get('option2') : '' %>"/>
+	</p>
+	<p>
+	<label>Option3</label>
+	<input type="text" name="option3" value="<%= question ? question.get('option3') : '' %>"/>
+	</p>
+	<hr />
+	<Button type="submit" class="btn"><%= question ? 'Update' : 'Create' %></Button>
+	<% if(question){ %>
+		<input type="hidden" name="id" value="<%= question.id %>"/>
+		<Button type="button" class="btn btn-danger delete-question">Delete</Button>
+	<% }; %>
+	
+</form>

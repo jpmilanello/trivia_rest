@@ -1,0 +1,26 @@
+<form class="edit-user-form">
+	<legend><%= user ? 'Update' : 'Create' %> User</legend>
+	<p>
+		<label>Name</label>
+		<input type="text" name="name" value="<%= user ? user.get('name') : '' %>"/>
+	</p>
+	<p>
+		<label>Last Name</label>
+		<input type="text" name="lastName" value="<%= user ? user.get('lastName') : '' %>"/>
+	</p>
+	<p>
+		<label>User</label>
+		<input type="text" name="user" value="<%= user ? user.get('user') : '' %>"/>
+	</p>
+	<p>
+		<label>Email</label>
+		<input type="text" name="email" value="<%= user ? user.get('email') : '' %>"/>
+	</p>
+	<hr />
+	<Button type="submit" class="btn"><%= user ? 'Update' : 'Create' %></Button>
+	<% if(user){ %>
+		<input type="hidden" name="id" value="<%= user.id %>"/>
+		<Button type="button" class="btn btn-danger delete-user">Delete</Button>
+	<% }; %>
+	
+</form>
