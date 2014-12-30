@@ -9,11 +9,14 @@
 
 </head>  
 <body>
-	<div class="container">
-		<h2 class="selected" id="trivia_tab">Trivia Manager</h2>
-		<h2 id="user_tab">User Manager</h2>
-		<hr />
-		<div class="page"></div>
+	<div class="container-fluid">
+		<div class="wrapper row">
+			<aside class="col-sm-3 col-xs-12">
+				<p class="tab selected" id="trivia_tab">Trivia Manager</p>
+				<p class="tab" id="user_tab">User Manager</p>
+			</aside>
+			<div class="page col-sm-9 col-xs-12"></div>
+		</div>
 	</div>
 	<script src="js/snippets.js"></script>
 	<script data-main="js/main" src="js/libs/require/require.js"></script>

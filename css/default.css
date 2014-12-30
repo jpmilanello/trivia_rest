@@ -1,8 +1,57 @@
-h2{
-	color: #ccc;
-	display: inline;
-}
+html, body {
+  background: url("../img/back-pattern.jpg");
+  background-repeat: repeat;
+  height: 100%;
+  margin: 0;
+  min-width: 500px; }
 
-.selected{
-	color: #000;
-}
+a {
+  color: #4DC394; }
+
+hr {
+  border: 1px solid #555; }
+
+aside {
+  background: #555;
+  opacity: 0.8; }
+
+form {
+  max-width: 500px; }
+  form label {
+    width: 100%; }
+  form input {
+    width: 100%; }
+
+.container-fluid, .wrapper {
+  height: 100%; }
+
+.page {
+  padding: 20px; }
+
+.tab {
+  color: #FFF;
+  display: inline-block;
+  margin: 0;
+  padding: 10px; }
+  .tab.selected {
+    color: #4DC394; }
+
+.btn-primary {
+  background-color: #4DC394;
+  border: 1px solid #2DA374; }
+  .btn-primary:hover {
+    background-color: #2DA374;
+    border: 1px solid #2DA374; }
+
+@media (min-width: 768px) {
+  aside {
+    background: #555;
+    height: 100%;
+    opacity: 1;
+    padding: 20px; }
+
+  .tab {
+    display: block;
+    font-size: 1.5em; } }
+
+/*# sourceMappingURL=default.css.map */

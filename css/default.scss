@@ -1,0 +1,82 @@
+$primary-color: #4DC394;
+$primary-color-dark: #2DA374;
+$secundary-color:#555;
+$selected-color: #4DC394;
+$unselected-color: #FFF;
+
+@mixin border($color,$width) {
+  border: #{$width}px solid #{$color};
+}
+
+
+html,body{
+	background: url('../img/back-pattern.jpg'); 
+	background-repeat: repeat;
+	height: 100%;
+	margin: 0;
+	min-width: 500px;
+}
+
+a{
+	color: $primary-color;
+}
+
+hr{
+	@include border($secundary-color, 1);
+}
+
+aside{
+	background: $secundary-color;
+	opacity: 0.8;
+}
+
+form{
+	max-width: 500px;
+	label{
+		width: 100%;
+	}	
+	input{
+		width: 100%;
+	}
+}
+
+.container-fluid,.wrapper{
+	height: 100%;
+}
+
+.page{
+	padding: 20px;
+}
+
+.tab{
+	color: $unselected-color;
+	display: inline-block;
+	margin: 0;
+	padding: 10px;
+	&.selected{
+		color: $selected-color;
+	}
+}
+
+.btn-primary{
+	background-color: $primary-color;
+	@include border($primary-color-dark,1);
+	&:hover{
+		background-color: $primary-color-dark;
+		@include border($primary-color-dark,1);
+	}
+}
+
+@media(min-width:768px){
+	aside{
+		background: $secundary-color;
+		height: 100%;
+		opacity: 1;
+		padding: 20px;
+	}
+
+	.tab{
+		display: block;
+		font-size: 1.5em;
+	}
+}

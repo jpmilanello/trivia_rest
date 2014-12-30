@@ -21,6 +21,8 @@
 	<% if(user){ %>
 		<input type="hidden" name="id" value="<%= user.id %>"/>
 		<Button type="button" class="btn btn-danger delete-user">Delete</Button>
+	<% }else{ %>
+		<a href="#/admin" class="btn btn-danger">Back</a>
 	<% }; %>
 	
 </form>

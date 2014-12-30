@@ -25,6 +25,8 @@
 	<% if(question){ %>
 		<input type="hidden" name="id" value="<%= question.id %>"/>
 		<Button type="button" class="btn btn-danger delete-question">Delete</Button>
+	<% }else{ %>
+		<a href="" class="btn btn-danger">Back</a>
 	<% }; %>
 	
 </form>
