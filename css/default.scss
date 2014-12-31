@@ -8,6 +8,26 @@ $unselected-color: #FFF;
   border: #{$width}px solid #{$color};
 }
 
+@mixin rotate($degrees){
+    -webkit-transform: rotate($degrees); /* Chrome, Safari, Opera */
+    -moz-transform: rotate($degrees); /* IE 9 */
+    -ms-transform: rotate($degrees); /* IE 9 */
+    transform: rotate($degrees);
+}
+
+@mixin translate($tx,$ty){
+    -webkit-transform: translate($tx,$ty); /* Chrome, Safari, Opera */
+    -moz-transform: translate($tx,$ty); /* IE 9 */
+    -ms-transform: translate($tx,$ty); /* IE 9 */
+    transform: translate($tx,$ty);
+}
+
+@mixin transition{
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 
 html,body{
 	background: url('../img/back-pattern.jpg'); 
@@ -69,12 +89,27 @@ form{
 
 @media(min-width:768px){
 	aside{
+		@include transition;
 		background: $secundary-color;
 		height: 100%;
 		opacity: 1;
 		padding: 20px;
+		position: relative;
+		img{
+			@include transition;
+			@include translate(0,-50%);
+			cursor: pointer;
+			position: absolute;
+			right: 0px;
+			top: 50%;
+			width: 32px;
+		}
 	}
 
+	.page{
+		@include transition;
+	}
+	
 	.tab{
 		display: block;
 		font-size: 1.5em;

@@ -45,10 +45,38 @@ form {
 
 @media (min-width: 768px) {
   aside {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
     background: #555;
     height: 100%;
     opacity: 1;
-    padding: 20px; }
+    padding: 20px;
+    position: relative; }
+    aside img {
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      -webkit-transform: translate(0, -50%);
+      /* Chrome, Safari, Opera */
+      -moz-transform: translate(0, -50%);
+      /* IE 9 */
+      -ms-transform: translate(0, -50%);
+      /* IE 9 */
+      transform: translate(0, -50%);
+      cursor: pointer;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      width: 32px; }
+
+  .page {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease; }
 
   .tab {
     display: block;
