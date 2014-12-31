@@ -6,6 +6,9 @@ require.config({
   }
 
 });
+ require.config({
+        urlArgs: "v=" +  (new Date()).getTime()
+    });
 
 require([
 

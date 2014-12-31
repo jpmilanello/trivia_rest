@@ -5,6 +5,10 @@ html, body {
   margin: 0;
   min-width: 500px; }
 
+h1 {
+  color: #2DA374;
+  font-weight: bolder; }
+
 a {
   color: #4DC394; }
 
@@ -14,6 +18,12 @@ hr {
 aside {
   background: #555;
   opacity: 0.8; }
+  aside div {
+    display: inline-block; }
+  aside .aside {
+    display: none; }
+  aside img.tab {
+    display: none; }
 
 form {
   max-width: 500px; }
@@ -28,13 +38,19 @@ form {
 .page {
   padding: 20px; }
 
+.div-tab {
+  color: #FFF; }
+  .div-tab img {
+    opacity: 0.5; }
+  .div-tab.selected {
+    color: #4DC394; }
+    .div-tab.selected img {
+      opacity: 1; }
+
 .tab {
-  color: #FFF;
   display: inline-block;
   margin: 0;
   padding: 10px; }
-  .tab.selected {
-    color: #4DC394; }
 
 .btn-primary {
   background-color: #4DC394;
@@ -47,6 +63,7 @@ form {
   aside {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
     background: #555;
@@ -54,9 +71,13 @@ form {
     opacity: 1;
     padding: 20px;
     position: relative; }
-    aside img {
+    aside div {
+      cursor: pointer;
+      display: block; }
+    aside .aside {
       -webkit-transition: all 0.5s ease;
       -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
       -o-transition: all 0.5s ease;
       transition: all 0.5s ease;
       -webkit-transform: translate(0, -50%);
@@ -67,14 +88,26 @@ form {
       /* IE 9 */
       transform: translate(0, -50%);
       cursor: pointer;
+      display: inline-block;
       position: absolute;
       right: 0px;
       top: 50%;
       width: 32px; }
+    aside img.tab {
+      display: inline-block;
+      padding: 0;
+      vertical-align: middle;
+      width: 32px; }
+    aside p.tab {
+      display: inline-block;
+      font-size: 1.3em;
+      padding: 0;
+      vertical-align: middle; }
 
   .page {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
 

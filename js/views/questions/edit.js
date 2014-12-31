@@ -12,6 +12,8 @@ define([
 		/* HTML element for single page app */
 		el: '.page',
 		render: function (options) {
+			$('#user_tab').removeClass('selected');
+  			$('#trivia_tab').addClass('selected');
 			/* Create an instance for reference in anonymous function */
 			var element = this;
 			/* if an id is present, it will load the data in the html form template */

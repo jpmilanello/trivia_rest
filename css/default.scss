@@ -25,6 +25,7 @@ $unselected-color: #FFF;
 @mixin transition{
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
@@ -35,6 +36,11 @@ html,body{
 	height: 100%;
 	margin: 0;
 	min-width: 500px;
+}
+
+h1{
+	color: $primary-color-dark;
+	font-weight: bolder;
 }
 
 a{
@@ -48,6 +54,15 @@ hr{
 aside{
 	background: $secundary-color;
 	opacity: 0.8;
+	div{
+		display: inline-block;
+	}
+	.aside{
+		display: none;
+	}
+	img.tab{
+		display: none;
+	}
 }
 
 form{
@@ -68,14 +83,22 @@ form{
 	padding: 20px;
 }
 
-.tab{
+.div-tab{
 	color: $unselected-color;
+	img{
+		opacity: 0.5;
+	}	
+	&.selected{
+		color: $selected-color;
+		img{
+			opacity: 1;
+		}
+	}
+}
+.tab{
 	display: inline-block;
 	margin: 0;
 	padding: 10px;
-	&.selected{
-		color: $selected-color;
-	}
 }
 
 .btn-primary{
@@ -95,14 +118,31 @@ form{
 		opacity: 1;
 		padding: 20px;
 		position: relative;
-		img{
+		div{
+			cursor: pointer;
+			display: block;
+		}
+		.aside{
 			@include transition;
 			@include translate(0,-50%);
 			cursor: pointer;
+			display: inline-block;
 			position: absolute;
 			right: 0px;
 			top: 50%;
 			width: 32px;
+		}
+		img.tab{
+			display: inline-block;
+			padding: 0;
+			vertical-align: middle;
+			width: 32px;
+		}
+		p.tab{
+			display: inline-block;
+			font-size: 1.3em;
+			padding: 0;
+			vertical-align: middle;
 		}
 	}
 

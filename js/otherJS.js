@@ -1,18 +1,25 @@
 define([
   'jquery',
 ], function($){
-    $('aside').on('click','.aside-opened',function () {
-      $(this).removeClass('aside-opened').addClass('aside-closed');
+    $('aside').on('click','.opened',function () {
+      $(this).removeClass('opened').addClass('closed');
       $('aside').css({width:"50px"});
       $('.page').css({width:"calc(100% - 50px)"});
-      $(this).css({transform: 'rotate(180deg)'}); 
+      $('p.tab').css({display:"none"});
+      $('.div-tab').css({transform:"translateY(150px)"});
+      $('h1').css({transform: 'rotate(-90deg) translateX(-150px)'});
+      $(this).css({transform: 'rotate(180deg) translateY(-150px)'});
+
     });
 
-    $('aside').on('click','.aside-closed',function () {
-      $(this).removeClass('aside-closed').addClass('aside-opened');
+    $('aside').on('click','.closed',function () {
+      $(this).removeClass('closed').addClass('opened');
       $('aside').removeAttr("style");
       $('.page').removeAttr("style");
-      $(this).css({transform: 'rotate(0deg)'}); 
+      $('p.tab').css({display:"inline-block"});
+      $('.div-tab').css({transform:"translateY(0px)"});
+      $('h1').css({transform: 'rotate(0deg) translateX(0px)'});
+      $(this).css({transform: 'rotate(0deg) translateY(0px)'}); 
     });
 });
 
